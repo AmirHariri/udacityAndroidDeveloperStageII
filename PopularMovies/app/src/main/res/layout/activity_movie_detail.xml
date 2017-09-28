@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.popularmovies.MovieDetail">
+
+    <requestFocus />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2c500b"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:padding="@dimen/paddig_large"
+                android:textSize="26sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_favorite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/favorite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_date_and_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iv_movie_detail_thombnail"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="4"
+                android:contentDescription="@string/movie_poster_description" />
+
+            <LinearLayout
+                android:id="@+id/date_and_rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/paddig_large"
+                android:paddingLeft="@dimen/text_padding_sides"
+                android:paddingRight="@dimen/text_margin_sides"
+                android:paddingTop="@dimen/text_padding_top">
+
+                <TextView
+                    android:id="@+id/tv_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/text_padding_top"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/text_padding_top"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_movie_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:paddingEnd="@dimen/text_padding_sides"
+            android:paddingLeft="@dimen/paddig_large"
+            android:paddingRight="@dimen/text_padding_sides"
+            android:paddingStart="@dimen/paddig_large"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/text_padding_top"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingLeft="@dimen/text_padding_sides"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/trailers" />
+
+            <ListView
+                android:id="@+id/lv_trailer"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:paddingLeft="@dimen/text_padding_top"
+                android:paddingRight="@dimen/text_padding_top" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tv_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/text_margin_sides"
+            android:layout_marginTop="@dimen/padding_small"
+            android:text="@string/reviews"
+            tools:text="DUMMY TEXT FOR REVIEWS" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <ListView
+            android:id="@+id/lv_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:paddingTop="@dimen/text_padding_top" />
+
+    </LinearLayout>
+
+
+</ScrollView>
